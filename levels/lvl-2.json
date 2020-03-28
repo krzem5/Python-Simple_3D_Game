@@ -1,0 +1,63 @@
+[
+	{
+		"_comment": "player data",
+		"end_pos": [
+			0,
+			3,
+			0
+		],
+		"end_rot": [
+			-34.875,
+			-24.875
+		],
+		"start_pos": [
+			0,
+			3,
+			0
+		],
+		"start_rot": [
+			-34.875,
+			-24.875
+		],
+		"type": "player"
+	},
+	{
+		"_comment": "end animation",
+		"animation": [
+			{
+				"tag": "blkId-0",
+				"translate": [
+					{
+						"pos": [
+							-3,
+							0,
+							-2
+						],
+						"time": [
+							7,
+							10,
+							10
+						]
+					}
+				]
+			}
+		],
+		"type": "end_trigger"
+	},
+	{
+		"_comment": "block",
+		"pos": [
+			0,
+			3,
+			0
+		],
+		"size": [
+			1,
+			1,
+			1
+		],
+		"tags": "blkId-0",
+		"tex": "gray:corner",
+		"type": "block"
+	}
+]
