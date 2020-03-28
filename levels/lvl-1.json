@@ -1,0 +1,1140 @@
+[
+	{
+		"_comment": "player data",
+		"end_pos": [
+			20,
+			30,
+			7
+		],
+		"end_rot": [
+			-60,
+			70
+		],
+		"start_pos": [
+			13,
+			13,
+			13
+		],
+		"start_rot": [
+			-45,
+			45
+		],
+		"type": "player"
+	},
+	{
+		"_comment": "end block",
+		"pos": [
+			0,
+			-4,
+			0
+		],
+		"tags": "eblk",
+		"tex": "gray:end",
+		"type": "endblock"
+	},
+	{
+		"_comment": "level end",
+		"animation": [
+			{
+				"tag": "wA",
+				"translate": [
+					{
+						"pos": [
+							-1,
+							0,
+							0
+						],
+						"time": [
+							5,
+							0,
+							0
+						]
+					},
+					{
+						"wait_time": 0.3
+					},
+					{
+						"pos": [
+							0,
+							0,
+							10
+						],
+						"time": [
+							0,
+							0,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "wB",
+				"translate": [
+					{
+						"pos": [
+							1,
+							0,
+							0
+						],
+						"time": [
+							5,
+							0,
+							0
+						]
+					},
+					{
+						"wait_time": 0.3
+					},
+					{
+						"pos": [
+							0,
+							0,
+							-10
+						],
+						"time": [
+							0,
+							0,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "wE",
+				"translate": [
+					{
+						"pos": [
+							0,
+							0,
+							-1
+						],
+						"time": [
+							0,
+							0,
+							5
+						]
+					},
+					{
+						"wait_time": 0.3
+					},
+					{
+						"pos": [
+							-10,
+							0,
+							0
+						],
+						"time": [
+							20,
+							0,
+							0
+						]
+					}
+				]
+			},
+			{
+				"tag": "wF",
+				"translate": [
+					{
+						"pos": [
+							0,
+							0,
+							1
+						],
+						"time": [
+							0,
+							0,
+							5
+						]
+					},
+					{
+						"wait_time": 0.3
+					},
+					{
+						"pos": [
+							10,
+							0,
+							0
+						],
+						"time": [
+							20,
+							0,
+							0
+						]
+					}
+				]
+			},
+			{
+				"tag": "tb",
+				"translate": [
+					"destroy"
+				]
+			},
+			{
+				"tag": "bb",
+				"translate": [
+					"destroy"
+				]
+			},
+			{
+				"tag": "wC",
+				"translate": [
+					{
+						"wait_time": 0.3
+					},
+					{
+						"pos": [
+							0,
+							-5,
+							0
+						],
+						"time": [
+							0,
+							10,
+							0
+						]
+					}
+				]
+			},
+			{
+				"tag": "wD",
+				"translate": [
+					{
+						"wait_time": 0.3
+					},
+					{
+						"pos": [
+							0,
+							5,
+							0
+						],
+						"time": [
+							0,
+							10,
+							0
+						]
+					}
+				]
+			},
+			{
+				"tag": "c0",
+				"translate": [
+					{
+						"wait_time": 1
+					},
+					{
+						"pos": [
+							-2,
+							-2,
+							-2
+						],
+						"time": [
+							20,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "c1",
+				"translate": [
+					{
+						"wait_time": 1
+					},
+					{
+						"pos": [
+							2,
+							-2,
+							-2
+						],
+						"time": [
+							20,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "c2",
+				"translate": [
+					{
+						"wait_time": 1
+					},
+					{
+						"pos": [
+							-2,
+							-2,
+							2
+						],
+						"time": [
+							20,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "c3",
+				"translate": [
+					{
+						"wait_time": 1
+					},
+					{
+						"pos": [
+							2,
+							-2,
+							2
+						],
+						"time": [
+							20,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "c4",
+				"translate": [
+					{
+						"wait_time": 1
+					},
+					{
+						"pos": [
+							-2,
+							2,
+							-2
+						],
+						"time": [
+							20,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "c5",
+				"translate": [
+					{
+						"wait_time": 1
+					},
+					{
+						"pos": [
+							2,
+							2,
+							-2
+						],
+						"time": [
+							20,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "c6",
+				"translate": [
+					{
+						"wait_time": 1
+					},
+					{
+						"pos": [
+							-2,
+							2,
+							2
+						],
+						"time": [
+							20,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "c7",
+				"translate": [
+					{
+						"wait_time": 1
+					},
+					{
+						"pos": [
+							2,
+							2,
+							2
+						],
+						"time": [
+							20,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "eX0",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							0,
+							-2,
+							-2
+						],
+						"time": [
+							0,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "eX1",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							0,
+							-2,
+							2
+						],
+						"time": [
+							0,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "eX2",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							0,
+							2,
+							-2
+						],
+						"time": [
+							0,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "eX3",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							0,
+							2,
+							2
+						],
+						"time": [
+							0,
+							20,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "eY0",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							-2,
+							0,
+							-2
+						],
+						"time": [
+							20,
+							0,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "eY1",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							2,
+							0,
+							-2
+						],
+						"time": [
+							20,
+							0,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "eY2",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							-2,
+							0,
+							2
+						],
+						"time": [
+							20,
+							0,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "eY3",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							2,
+							0,
+							2
+						],
+						"time": [
+							20,
+							0,
+							20
+						]
+					}
+				]
+			},
+			{
+				"tag": "eZ0",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							-2,
+							-2,
+							0
+						],
+						"time": [
+							20,
+							20,
+							0
+						]
+					}
+				]
+			},
+			{
+				"tag": "eZ1",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							2,
+							-2,
+							0
+						],
+						"time": [
+							20,
+							20,
+							0
+						]
+					}
+				]
+			},
+			{
+				"tag": "eZ2",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							-2,
+							2,
+							0
+						],
+						"time": [
+							20,
+							20,
+							0
+						]
+					}
+				]
+			},
+			{
+				"tag": "eZ3",
+				"translate": [
+					{
+						"wait_time": 2
+					},
+					{
+						"pos": [
+							2,
+							2,
+							0
+						],
+						"time": [
+							20,
+							20,
+							0
+						]
+					}
+				]
+			}
+		],
+		"type": "end_trigger"
+	},
+	{
+		"_comment": "button",
+		"action": [
+			{
+				"tag": "gate",
+				"translate": [
+					{
+						"pos": [
+							-1,
+							0,
+							0
+						],
+						"time": [
+							5,
+							0,
+							0
+						]
+					},
+					{
+						"pos": [
+							0,
+							7,
+							0
+						],
+						"time": [
+							0,
+							35,
+							0
+						]
+					}
+				]
+			}
+		],
+		"direction": "U",
+		"pos": [
+			0,
+			5,
+			0
+		],
+		"tags": "tb",
+		"tex": "gray:btn",
+		"type": "button"
+	},
+	{
+		"_comment": "button",
+		"action": [
+			{
+				"tag": "eblk",
+				"translate": [
+					{
+						"pos": [
+							0,
+							4,
+							0
+						],
+						"time": [
+							0,
+							50,
+							0
+						]
+					}
+				]
+			},
+			{
+				"tag": "gate",
+				"translate": [
+					{
+						"pos": [
+							0,
+							-7,
+							0
+						],
+						"time": [
+							0,
+							35,
+							0
+						]
+					},
+					{
+						"pos": [
+							1,
+							0,
+							0
+						],
+						"time": [
+							5,
+							0,
+							0
+						]
+					}
+				]
+			}
+		],
+		"direction": "U",
+		"pos": [
+			0,
+			-3,
+			0
+		],
+		"tags": "bb",
+		"tex": "gray:btn",
+		"type": "button"
+	},
+	{
+		"_comment": "corner",
+		"pos": [
+			-4,
+			-4,
+			-4
+		],
+		"size": [
+			1,
+			1,
+			1
+		],
+		"tags": "c0",
+		"tex": "gray:corner",
+		"type": "block"
+	},
+	{
+		"_comment": "corner",
+		"pos": [
+			4,
+			-4,
+			-4
+		],
+		"size": [
+			1,
+			1,
+			1
+		],
+		"tags": "c1",
+		"tex": "gray:corner",
+		"type": "block"
+	},
+	{
+		"_comment": "corner",
+		"pos": [
+			-4,
+			-4,
+			4
+		],
+		"size": [
+			1,
+			1,
+			1
+		],
+		"tags": "c2",
+		"tex": "gray:corner",
+		"type": "block"
+	},
+	{
+		"_comment": "corner",
+		"pos": [
+			4,
+			-4,
+			4
+		],
+		"size": [
+			1,
+			1,
+			1
+		],
+		"tags": "c3",
+		"tex": "gray:corner",
+		"type": "block"
+	},
+	{
+		"_comment": "corner",
+		"pos": [
+			-4,
+			4,
+			-4
+		],
+		"size": [
+			1,
+			1,
+			1
+		],
+		"tags": "c4",
+		"tex": "gray:corner",
+		"type": "block"
+	},
+	{
+		"_comment": "corner",
+		"pos": [
+			4,
+			4,
+			-4
+		],
+		"size": [
+			1,
+			1,
+			1
+		],
+		"tags": "c5",
+		"tex": "gray:corner",
+		"type": "block"
+	},
+	{
+		"_comment": "corner",
+		"pos": [
+			-4,
+			4,
+			4
+		],
+		"size": [
+			1,
+			1,
+			1
+		],
+		"tags": "c6",
+		"tex": "gray:corner",
+		"type": "block"
+	},
+	{
+		"_comment": "corner",
+		"pos": [
+			4,
+			4,
+			4
+		],
+		"size": [
+			1,
+			1,
+			1
+		],
+		"tags": "c7",
+		"tex": "gray:corner",
+		"type": "block"
+	},
+	{
+		"_comment": "X-edge",
+		"pos": [
+			-3,
+			-4,
+			-4
+		],
+		"size": [
+			7,
+			1,
+			1
+		],
+		"tags": "eX0",
+		"tex": "gray:edgeX",
+		"type": "block"
+	},
+	{
+		"_comment": "X-edge",
+		"pos": [
+			-3,
+			-4,
+			4
+		],
+		"size": [
+			7,
+			1,
+			1
+		],
+		"tags": "eX1",
+		"tex": "gray:edgeX",
+		"type": "block"
+	},
+	{
+		"_comment": "X-edge",
+		"pos": [
+			-3,
+			4,
+			-4
+		],
+		"size": [
+			7,
+			1,
+			1
+		],
+		"tags": "eX2",
+		"tex": "gray:edgeX",
+		"type": "block"
+	},
+	{
+		"_comment": "X-edge",
+		"pos": [
+			-3,
+			4,
+			4
+		],
+		"size": [
+			7,
+			1,
+			1
+		],
+		"tags": "eX3",
+		"tex": "gray:edgeX",
+		"type": "block"
+	},
+	{
+		"_comment": "Y-edge",
+		"pos": [
+			-4,
+			-3,
+			-4
+		],
+		"size": [
+			1,
+			7,
+			1
+		],
+		"tags": "eY0",
+		"tex": "gray:edgeY",
+		"type": "block"
+	},
+	{
+		"_comment": "Y-edge",
+		"pos": [
+			4,
+			-3,
+			-4
+		],
+		"size": [
+			1,
+			7,
+			1
+		],
+		"tags": "eY1",
+		"tex": "gray:edgeY",
+		"type": "block"
+	},
+	{
+		"_comment": "Y-edge",
+		"pos": [
+			-4,
+			-3,
+			4
+		],
+		"size": [
+			1,
+			7,
+			1
+		],
+		"tags": "eY2",
+		"tex": "gray:edgeY",
+		"type": "block"
+	},
+	{
+		"_comment": "Y-edge",
+		"pos": [
+			4,
+			-3,
+			4
+		],
+		"size": [
+			1,
+			7,
+			1
+		],
+		"tags": "eY3",
+		"tex": "gray:edgeY",
+		"type": "block"
+	},
+	{
+		"_comment": "Z-edge",
+		"pos": [
+			-4,
+			-4,
+			-3
+		],
+		"size": [
+			1,
+			1,
+			7
+		],
+		"tags": "eZ0",
+		"tex": "gray:edgeZ",
+		"type": "block"
+	},
+	{
+		"_comment": "Z-edge",
+		"pos": [
+			4,
+			-4,
+			-3
+		],
+		"size": [
+			1,
+			1,
+			7
+		],
+		"tags": "eZ1",
+		"tex": "gray:edgeZ",
+		"type": "block"
+	},
+	{
+		"_comment": "Z-edge",
+		"pos": [
+			-4,
+			4,
+			-3
+		],
+		"size": [
+			1,
+			1,
+			7
+		],
+		"tags": "eZ2",
+		"tex": "gray:edgeZ",
+		"type": "block"
+	},
+	{
+		"_comment": "Z-edge",
+		"pos": [
+			4,
+			4,
+			-3
+		],
+		"size": [
+			1,
+			1,
+			7
+		],
+		"tags": "eZ3",
+		"tex": "gray:edgeZ",
+		"type": "block"
+	},
+	{
+		"_comment": "X-wall",
+		"pos": [
+			-4,
+			-3,
+			-3
+		],
+		"size": [
+			1,
+			7,
+			7
+		],
+		"tags": "gate wA",
+		"tex": "gray:wallX",
+		"type": "block"
+	},
+	{
+		"_comment": "X-wall",
+		"pos": [
+			4,
+			-3,
+			-3
+		],
+		"size": [
+			1,
+			7,
+			7
+		],
+		"tags": "wB",
+		"tex": "gray:wallX",
+		"type": "block"
+	},
+	{
+		"_comment": "Y-wall",
+		"pos": [
+			-3,
+			-4,
+			-3
+		],
+		"size": [
+			7,
+			1,
+			7
+		],
+		"tags": "wC",
+		"tex": "gray:wallY",
+		"type": "block"
+	},
+	{
+		"_comment": "X-wall",
+		"pos": [
+			-3,
+			4,
+			-3
+		],
+		"size": [
+			7,
+			1,
+			7
+		],
+		"tags": "wD",
+		"tex": "gray:wallY",
+		"type": "block"
+	},
+	{
+		"_comment": "Z-wall",
+		"pos": [
+			-3,
+			-3,
+			-4
+		],
+		"size": [
+			7,
+			7,
+			1
+		],
+		"tags": "wE",
+		"tex": "gray:wallZ",
+		"type": "block"
+	},
+	{
+		"_comment": "X-wall",
+		"pos": [
+			-3,
+			-3,
+			4
+		],
+		"size": [
+			7,
+			7,
+			1
+		],
+		"tags": "wF",
+		"tex": "gray:wallZ",
+		"type": "block"
+	}
+]
