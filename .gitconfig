@@ -5,6 +5,7 @@ desc=Python-Simple_3D_Game
 public=true
 homepage=
 license=mit
+remote=
 
 file.readme=.\README.md
 file.gitignore=.\.gitignore
