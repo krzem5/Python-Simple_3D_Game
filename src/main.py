@@ -1,4 +1,4 @@
-from math import sin, cos, pi, sqrt, radians, floor
+from math import sin, cos, pi, sqrt
 from pyglet.gl import *
 from pyglet.window import key
 import copy
@@ -166,8 +166,10 @@ class Button:
 						self.pos=[int(self.pos[0]),int(self.pos[1]),int(self.pos[2])]
 						self.create()
 						if len(self.transl)>0:self.action(self.transl[0])
-			try:self.batch.draw()
-			except:self.create();self.batch.draw()
+			try:
+				self.batch.draw()
+			except BaseException:
+				self.create();self.batch.draw()
 	def press(self):
 		if self.h==3:
 			self.h=1
@@ -264,8 +266,10 @@ class Block:
 						self.pos=[int(self.pos[0]),int(self.pos[1]),int(self.pos[2])]
 						self.create()
 						if len(self.transl)>0:self.action(self.transl[0])
-			try:self.batch.draw()
-			except:self.create();self.batch.draw()
+			try:
+				self.batch.draw()
+			except BaseException:
+				self.create();self.batch.draw()
 	def get_tex(self,n):
 		tex=pyglet.image.load(f"./img/{n}").texture
 		glTexParameterf(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST)
@@ -350,8 +354,10 @@ class EndBlock:
 					self.create()
 					if len(self.transl)>0:self.action(self.transl[0])
 					else:self.hbox[6]=1
-		try:self.batch.draw()
-		except:self.create();self.batch.draw()
+		try:
+			self.batch.draw()
+		except BaseException:
+			self.create();self.batch.draw()
 	def cube(self,x,y,z,s=3):
 		X,Y,Z=x+s/16,y+s/16,z+s/16
 		self.batch.add(4,GL_QUADS,self.tex,("v3f",(x,y,z,x,y,Z,x,Y,Z,x,Y,z)),self.tc)
@@ -463,7 +469,7 @@ class World:
 		else:
 			self.last=True
 	def end_level(self):
-		if self.end_anim!=None:
+		if self.end_anim is not None:
 			for b in self.end_anim["animation"]:
 				for n in self.slf.models:
 					if b["tag"] in n.tags:
@@ -486,9 +492,9 @@ class World:
 				player={"pos":obj["start_pos"],"rot":obj["start_rot"],"epos":obj["end_pos"],"erot":obj["end_rot"]}
 			elif obj["type"]=="end_trigger":
 				end_anim=obj
-		if player!=None:
+		if player is not None:
 			self.slf.cam.set(player)
-		if endblock!=None:
+		if endblock is not None:
 			models+=[EndBlock(self.slf,endblock["pos"],endblock["tex"],tags=endblock["tags"])]
 		self.end_anim=end_anim
 		self.slf.models+=models
@@ -551,7 +557,7 @@ class Main(pyglet.window.Window):
 		if self.end and not self.darker:
 			self.cam.end()
 			self.dr_fps=False
-			if self.world.end_anim!=None:self.world.end_level()
+			if self.world.end_anim is not None:self.world.end_level()
 			d=True
 			for mdl in self.models:
 				if not (mdl.transl==[] and (mdl.transition==[0]*6 or mdl.transition==[0]*6+[1])):

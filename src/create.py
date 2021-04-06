@@ -1,8 +1,7 @@
-from math import sin, cos, pi, sqrt, radians, floor, ceil
+from math import sin, cos, pi, sqrt, floor
 from pyglet.gl import *
 from pyglet.window import key
 import copy
-import glob
 import json
 import os
 import time
@@ -196,8 +195,10 @@ class Button:
 						self.pos=[int(self.pos[0]),int(self.pos[1]),int(self.pos[2])]
 						self.create()
 						if len(self.transl)>0:self.action(self.transl[0])
-			try:self.batch.draw()
-			except:self.create();self.batch.draw()
+			try:
+				self.batch.draw()
+			except BaseException:
+				self.create();self.batch.draw()
 	def press(self):
 		if self.h==3:
 			self.h=1
@@ -363,8 +364,10 @@ class Block:
 						self.pos=[int(self.pos[0]),int(self.pos[1]),int(self.pos[2])]
 						self.create()
 						if len(self.transl)>0:self.action(self.transl[0])
-			try:self.batch.draw()
-			except:self.create();self.batch.draw()
+			try:
+				self.batch.draw()
+			except BaseException:
+				self.create();self.batch.draw()
 	def get_tex(self,n):
 		tex=pyglet.image.load(f"./img/{n}").texture
 		glTexParameterf(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST)
@@ -473,8 +476,10 @@ class EndBlock:
 					self.create()
 					if len(self.transl)>0:self.action(self.transl[0])
 					else:self.hbox[6]=1
-		try:self.batch.draw()
-		except:self.create();self.batch.draw()
+		try:
+			self.batch.draw()
+		except BaseException:
+			self.create();self.batch.draw()
 	def cube(self,x,y,z,s=3):
 		X,Y,Z=x+s/16,y+s/16,z+s/16
 		self.batch.add(4,GL_QUADS,self.tex,("v3f",(x,y,z,x,y,Z,x,Y,Z,x,Y,z)),self.tc)
@@ -616,7 +621,7 @@ class Camera:
 				self.anim_target=[None]*2
 				self.anim_drw_ln=[]
 				self.last_stp_i=-1
-				self.f_ext_batch() 
+				self.f_ext_batch()
 			else:
 				p=[floor(self.pos[0]),floor(self.pos[1]),floor(self.pos[2])]
 				for mdl in self.par.models:
@@ -642,7 +647,7 @@ class Camera:
 		p=[floor(self.pos[0]),floor(self.pos[1]),floor(self.pos[2])]
 		t=None
 		if keys[key._1]:t="gray"
-		if t!=None:
+		if t is not None:
 			for mdl in self.par.models:
 				if self.b_chk(mdl.tbox,p):
 					mdl.theme(t)
@@ -656,7 +661,7 @@ class Camera:
 		if keys[key._4]:t="S"
 		if keys[key._5]:t="E"
 		if keys[key._6]:t="N"
-		if t!=None:
+		if t is not None:
 			for mdl in self.par.models:
 				if mdl.__class__.__name__=="Button" and self.b_chk(mdl.tbox,p):
 					mdl.set_d(t)
@@ -672,12 +677,12 @@ class Camera:
 		if keys[key._5]:t="wallX"
 		if keys[key._6]:t="wallY"
 		if keys[key._7]:t="wallZ"
-		if t!=None:
+		if t is not None:
 			for mdl in self.par.models:
 				if self.b_chk(mdl.tbox,p):
 					if mdl.__class__.__name__=="Block":
 						mdl.tex_f(t)
-					elif tb!=None and mdl.__class__.__name__=="Button":
+					elif tb is not None and mdl.__class__.__name__=="Button":
 						mdl.tex_f(tb)
 					return
 	def add_anim_stp(self,stp):
@@ -789,12 +794,12 @@ class Camera:
 		self.ext_batch.add(2,GL_LINES,None,("v3f",(-5/16,0,0,5/16,0,0)),("c3B",(100,0,0,220,0,0)))
 		self.ext_batch.add(2,GL_LINES,None,("v3f",(0,-5/16,0,0,5/16,0)),("c3B",(0,100,0,0,220,0)))
 		self.ext_batch.add(2,GL_LINES,None,("v3f",(0,0,-5/16,0,0,5/16)),("c3B",(0,0,100,0,0,220)))
-		if self.anim_target[0]!=None:
+		if self.anim_target[0] is not None:
 			if type(self.anim_target[0])==dict:
 				for ni in range(len(self.anim_target[0]["animation"])-1,-1,-1):
 					n=self.anim_target[0]["animation"][ni]
 					mdl=self.g_mdl(n["tag"])
-					if mdl==None:
+					if mdl is None:
 						del self.anim_target[0]["animation"][ni]
 					else:
 						p=mdl.sp
@@ -848,7 +853,7 @@ class Camera:
 				for ni in range(len(self.anim_target[0].actioncmd)-1,-1,-1):
 					n=self.anim_target[0].actioncmd[ni]
 					mdl=self.g_mdl(n["tag"])
-					if mdl==None:
+					if mdl is None:
 						del self.anim_target[0].actioncmd[ni]
 					else:
 						p=mdl.sp
@@ -908,7 +913,7 @@ class Camera:
 						self.add_anim_stp(None)
 						self.remove_anim_stp()
 						return
-			if self.anim_target[1]!=None:
+			if self.anim_target[1] is not None:
 				if KEY==key.DELETE:self.add_anim_stp("destroy")
 				if KEY==key.C:
 					self.anim_drw_ln+=[p]
@@ -1041,7 +1046,7 @@ class Main(pyglet.window.Window):
 		glLineWidth(2)
 		self.models=[]
 		self.col=[1,1,1,0]
-		self.dr_fps=False		
+		self.dr_fps=False
 		self.cam=Camera(self,pos=(0,3,0),rot=(-90,0))
 		self.load(OPENFILENAME)
 		self.set_exclusive_mouse(1)
@@ -1059,7 +1064,7 @@ class Main(pyglet.window.Window):
 			self.cam.coll.togg()
 		if KEY==key.F:
 			self.dr_fps=not self.dr_fps
-		if KEY==key._1: 
+		if KEY==key._1:
 			self.cam.create_block("block")
 		if KEY==key._2:
 			self.cam.create_block("button")
@@ -1082,7 +1087,7 @@ class Main(pyglet.window.Window):
 	def update(self,dt):
 		self.cam.update(dt,self.keys)
 	def end_anim_r(self):
-		if not self.cam.end_an_ru and self.cam.end_anim!=None:
+		if not self.cam.end_an_ru and self.cam.end_anim is not None:
 			for b in self.cam.end_anim["animation"]:
 				for n in self.models:
 					if b["tag"] in n.tags:
@@ -1108,9 +1113,9 @@ class Main(pyglet.window.Window):
 					player={"pos":obj["start_pos"],"rot":obj["start_rot"],"epos":obj["end_pos"],"erot":obj["end_rot"]}
 				elif obj["type"]=="end_trigger":
 					end_anim=obj
-			if player!=None:
+			if player is not None:
 				self.cam.set(player)
-			if endblock!=None:
+			if endblock is not None:
 				models+=[EndBlock(self,endblock["pos"],endblock["tex"],tags=endblock["tags"])]
 			self.cam.end_anim=end_anim
 			self.models+=models
@@ -1129,7 +1134,7 @@ class Main(pyglet.window.Window):
 				btns+=[{"_comment":"button","type":"button","pos":mdl.sp,"direction":mdl.d,"tex":mdl.rt,"tags":" ".join(mdl.tags),"action":mdl.actioncmd}]
 			elif mdl.__class__.__name__=="Block":
 				btns+=[{"_comment":"block","type":"block","pos":mdl.sp,"tex":mdl.rt,"tags":" ".join(mdl.tags),"size":mdl.dims}]
-		if eb!=None:data+=[eb]
+		if eb is not None:data+=[eb]
 		data+=btns
 		data+=blks
 		with open(f"./levels/{fn}.json","w") as f:
