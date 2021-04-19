@@ -38,16 +38,6 @@ class Collision:
 		else:
 			self.par.col=[1,1,1,0]
 		return self.MAX_DISTANCE<pd
-	# def ext_box(self,box):
-	# 	def chk(n,b):
-	# 		if n>0:return n+b
-	# 		return -n-b
-	# 	nbox=copy.deepcopy(box)
-	# 	n=1/16
-	# 	d=sqrt((box[3]-box[0])**2+(box[4]-box[1])**2+(box[5]-box[2])**2)
-	# 	nbox[0]=chk(sqrt(((d+n)**2)/(1+(box[1]-box[4])/(box[0]-box[3])+(box[2]-box[5])/(box[0]-box[3]))),box[0])
-	# 	nbox[3]=chk(-sqrt(((d+n)**2)/(1+(box[1]-box[4])/(box[0]-box[3])+(box[2]-box[5])/(box[0]-box[3]))),box[0])
-	# 	return nbox
 	def check(self,pos):
 		if (self.chk_dst(pos)):return False
 		if (not self.chk):return True
